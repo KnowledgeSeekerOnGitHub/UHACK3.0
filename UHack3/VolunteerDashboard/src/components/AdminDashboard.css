@@ -1,0 +1,264 @@
+.admin-dashboard {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex; 
+  flex-direction: column; 
+  height: calc(100vh - 40px); 
+  max-width: 100%; 
+  background-color: #f0f2f5; /* Light background for a softer look */
+}
+
+h1 {
+  text-align: center;
+  color: #343a40; /* Darker color for better contrast */
+  margin-bottom: 20px;
+}
+
+.assignments-menu,
+.assignment-menu,
+.view-assignments {
+  display: block; 
+  margin: 20px auto; /* Center the blocks */
+  padding: 20px;
+  border: 1px solid #ced4da; /* Light border color */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
+  background-color: #ffffff; /* White background for content contrast */
+  width: 90%; /* Ensure blocks have a responsive width */
+}
+
+.main-button {
+  margin: 10px;
+  padding: 12px 24px; /* Increased padding for larger buttons */
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; 
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for effect */
+}
+
+.main-button:hover {
+  background-color: #0056b3; 
+  transform: translateY(-2px); /* Hover lift effect */
+}
+
+.main-button.inactive {
+  background-color: #6c757d; 
+}
+
+.close-button {
+  background-color: #28a745;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  margin-top: auto; 
+  margin-bottom: 20px;
+  padding: 10px; /* Added padding for better touch target */
+  border-radius: 5px; /* Consistent border radius */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for effect */
+}
+
+.close-button:hover {
+  background-color: #218838; /* Darker hover color */
+  transform: translateY(-2px); /* Hover lift effect */
+}
+
+.add-assignment-form,
+.assignment-menu form {
+  display: flex;
+  flex-direction: column; 
+  width: 100%; 
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #495057; /* Darker label color for contrast */
+}
+
+input[type="text"],
+select,
+textarea {
+  margin-bottom: 15px; 
+  padding: 12px; /* Increased padding for comfort */
+  border: 1px solid #ced4da; /* Lighter border */
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 16px; /* Larger font size */
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form-button {
+  padding: 12px; /* Increased padding for larger buttons */
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745; 
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for effect */
+}
+
+.form-button:hover {
+  background-color: #218838; 
+  transform: translateY(-2px); /* Hover lift effect */
+}
+
+.toggle-buttons {
+  margin-bottom: 15px;
+}
+
+.toggle-button {
+  padding: 12px; /* Increased padding for larger buttons */
+  border: none;
+  border-radius: 5px;
+  background-color: #3f4042; 
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for effect */
+}
+
+.toggle-button.active {
+  background-color: #007bff; 
+  color: white;
+}
+
+/* Assignment List Styles */
+.assignment-list {
+  border: 1px solid #ced4da; /* Lighter border color */
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-height: 150px; /* Set max height for the assignment list */
+  overflow-y: auto; /* Enable scrolling */
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.assignment-list li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.assignment-list li:hover {
+  background-color: #007bff; 
+  color: white;
+}
+
+.assignment-details {
+  margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.assignment-details th,
+.assignment-details td {
+  border: 1px solid #ced4da; /* Lighter border for details */
+  padding: 10px;
+  text-align: left;
+}
+
+.assignment-details th {
+  background-color: #f2f2f2;
+  color: #495057; /* Darker text for headers */
+}
+
+.assignment-details tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Dropdown Styles */
+.dropdown-container {
+  position: relative;
+  max-height: 200px;
+}
+
+.dropdown {
+  border: 1px solid #ced4da; /* Border color for dropdown */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
+  border-radius: 4px;
+  margin-top: 5px;
+  max-height: 200px; /* Set a max height for the dropdown */
+  overflow-y: auto; /* Enable scroll if content exceeds max height */
+  display: none; /* Hide dropdown by default */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .admin-dashboard {
+      padding: 10px; /* Reduced padding for smaller screens */
+  }
+
+  .main-button,
+  .close-button,
+  .form-button {
+      width: 100%; /* Full width on smaller screens */
+  }
+
+  .assignment-details {
+      width: 100%; /* Full width for assignment details */
+  }
+}
+
+.assignments-table {
+  max-height: 300px; /* Adjust as necessary */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #007bff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination button:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.pagination .current-page {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+
+.toggle-buttons {
+  margin-bottom: 15px;
+}
+
+.toggle-button {
+  padding: 10px 15px; /* Increased padding for larger buttons */
+  border: 1px solid #ced4da; /* Border for toggle buttons */
+  border-radius: 5px;
+  background-color: #f8f9fa; /* Light background */
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform for effect */
+}
+
+.toggle-button.active {
+  background-color: #007bff; /* Active state color */
+  color: white; /* Active state text color */
+}

@@ -1,0 +1,68 @@
+body {
+  background-color: #f0f4f8; /* Light blue-gray background */
+  color: #333333; /* Dark text color for contrast */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* height: 100vh; */
+  display: block;
+  justify-content: center; /* Center content horizontally */
+  align-items: center;    /* Center content vertically */
+}
+
+h1 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #007BFF; /* Blue color for headings */
+}
+
+/* Modal styles */
+.form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* Slightly transparent dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-modal > div {
+  background-color: #ffffff; /* White background for modal */
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px; /* Adjust width for better presentation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better depth */
+}
+
+/* Button styles */
+button {
+  background-color: #007bff; /* Blue background for buttons */
+  color: white; /* White text on buttons */
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 8px; /* Rounded corners for buttons */
+  font-size: 16px; /* Larger text */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+  width: 100%; /* Full width buttons */
+  margin-top: 10px; /* Space above buttons */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Input styles */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #007bff; /* Blue border */
+  border-radius: 8px; /* Rounded corners for inputs */
+  background-color: #ffffff; /* White background for inputs */
+  color: #333333; /* Dark text */
+  box-sizing: border-box; /* Padding and border included in the total width */
+}

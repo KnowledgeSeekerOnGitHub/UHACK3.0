@@ -1,0 +1,78 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  padding: 20px; /* Add some padding around the form */
+  background-color: #f0f4f8; /* Light background color */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Lighter shadow effect */
+  width: 100%;
+  max-width: 400px; /* Maximum width of the form */
+}
+
+h2 {
+  color: #007bff; /* Blue color for the title */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+label {
+  margin: 10px 0 5px; /* Space above and below labels */
+  font-weight: bold; /* Bold labels */
+  text-align: left; /* Left align labels */
+  color: #333; /* Dark color for labels */
+}
+
+input {
+  width: 100%;
+  padding: 10px 15px; /* Adjust left/right padding for consistency */
+  margin: 10px 0;
+  border: 1px solid #007bff; /* Blue border for inputs */
+  border-radius: 8px; /* Rounded corners for inputs */
+  background-color: #fff; /* White input background */
+  color: #333; /* Dark text in inputs */
+  box-sizing: border-box; /* Ensures padding and border are included in total width */
+}
+
+/* Additional padding for password input */
+input[type="password"],
+input[type="text"] {
+  padding-right: 40px; /* Add space on the right for the eye icon */
+}
+
+.error {
+  color: red; /* Red for error messages */
+  font-size: 14px; /* Smaller font size for errors */
+  margin-top: -10px; /* Adjust margin for error messages */
+  margin-bottom: 10px; /* Space below error messages */
+}
+
+.password-container {
+  position: relative; /* Position for the eye icon */
+}
+
+.eye-icon {
+  position: absolute; /* Position it within the input */
+  right: 10px; /* Align to the right */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  cursor: pointer; /* Pointer cursor for eye icon */
+  color: #007bff; /* Blue icon color */
+}
+
+button {
+  background-color: #007bff; /* Blue background for the button */
+  color: white; /* White text */
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 8px; /* Rounded corners for button */
+  font-size: 16px; /* Bigger text */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+  width: 100%; /* Full width button */
+  margin-top: 10px; /* Space above button */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

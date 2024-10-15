@@ -1,0 +1,127 @@
+body {
+  background-color: #121212; /* Dark background for contrast */
+  color: #EAEAEA; /* Light gray for better readability */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0; /* Reset padding */
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  height: 100vh; /* Full height */
+}
+
+.App {
+  width: 100%;
+  max-width: 400px; /* Max width for the form */
+  background-color: #1E1E1E; /* Form background color */
+  border-radius: 15px; /* Rounded corners for the form */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  padding: 30px; /* Padding inside the form */
+  text-align: center; /* Center text inside the form */
+}
+
+h1 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #4CAF50; /* Green color for title */
+}
+
+label {
+  display: block; /* Block layout for labels */
+  margin-bottom: 5px; /* Space between label and input */
+  font-weight: 600; /* Bold for labels */
+}
+
+input {
+  width: 100%;
+  padding: 10px 15px; /* Adjust left/right padding for consistency */
+  margin: 10px 0;
+  border: 1px solid #4CAF50; /* Green border for inputs */
+  border-radius: 8px; /* Rounded corners for inputs */
+  background-color: #333; /* Dark input background */
+  color: #EAEAEA; /* Light text in inputs */
+  box-sizing: border-box; /* Ensures padding and border are included in total width */
+}
+
+input::placeholder {
+  color: #B0B0B0; /* Light placeholder color */
+}
+
+input:focus {
+  outline: none;
+  border-color: #81C784; /* Lighter green on focus */
+  box-shadow: 0 0 5px rgba(129, 199, 132, 0.5); /* Soft shadow on focus */
+}
+
+.password-container {
+  position: relative; /* Position for the eye icon and tooltip */
+  margin-bottom: 20px; /* Space below password input */
+}
+
+.eye-icon {
+  position: absolute; /* Position it within the input */
+  right: 10px; /* Align to the right */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  cursor: pointer; /* Pointer cursor for eye icon */
+  color: #EAEAEA; /* Icon color */
+}
+
+/* Tooltip for password requirements (above input) */
+.password-container:hover .password-tooltip {
+  display: block; /* Show tooltip on hover */
+}
+
+.password-tooltip {
+  display: none; /* Hidden by default */
+  position: absolute;
+  bottom: 110%; /* Position above the input */
+  left: 0;
+  background-color: #333; /* Dark background for tooltip */
+  color: #EAEAEA; /* Light text for tooltip */
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 12px; /* Smaller font for tooltip */
+  width: 250px; /* Fixed width for tooltip */
+  z-index: 1; /* Ensure tooltip is above other elements */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.password-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent; /* Triangle for tooltip pointer */
+}
+
+button {
+  background-color: #4CAF50; /* Green background for the button */
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 8px; /* Rounded corners for button */
+  font-size: 16px; /* Bigger text */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+  width: 100%; /* Full width button */
+  margin-top: 10px; /* Space above button */
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.error {
+  color: red; /* Red for error messages */
+  font-size: 14px; /* Smaller font size for errors */
+  margin-top: -10px; /* Adjust margin for error messages */
+  margin-bottom: 10px; /* Space below error messages */
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #333 inset !important; /* Adjust autofill background color */
+  -webkit-text-fill-color: #EAEAEA !important; /* Adjust autofill text color */
+}
